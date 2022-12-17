@@ -4,7 +4,7 @@ import numpy as np
 
 # model = pickle.load(open('iri.pkl', 'rb'))
 
-app = Flask(__name__)
+app = Flask(__name__) 
 
 
 
