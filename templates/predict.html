@@ -1,0 +1,16 @@
+<html lang="es">
+    <title>Predict</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<body>
+    <div>
+        <h1>PREDICCIÓN</h1>
+
+        <div class="box">
+            <form method="POST" action="{{url_for('after_predict')}}">
+                <button type="submit">Hacer predicción</button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
