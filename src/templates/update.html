@@ -4,9 +4,9 @@
 <body>
     <div>
         <h1>ACTUALIZACIÓN</h1>
-
-            <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-
+            <form method="GET" action="{{url_for('update')}}">
+                <button type="submit">Actualizar</button>
+            </form>
     </div>
 </body>
 </html>
