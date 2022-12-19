@@ -21,10 +21,6 @@ def mape():
 
     global error
     error = mean_absolute_percentage_error(df['Users_log'].values, prediction.values)
-    
+    if error >= 0.2:
+        modelo = modelo.fit(df['Users_log'])
     return error
-
-
-
-if error >= 0.2:
-    modelo = modelo.fit(df['Users_log'])
