@@ -25,7 +25,7 @@ def re_train():
 # Esto es sólo pa subir los últimos 30 días de la base de datos
 @app.route('/actualizar', methods=['POST'])
 def actualizar():
-    return render_template('actualizar.html', tables = [acceso().to_html()], titles=[''])
+    return render_template('actualizar.html', tables = [acceso('mes').to_html()], titles=[''])
 
 @app.route('/predict')
 def predict():
