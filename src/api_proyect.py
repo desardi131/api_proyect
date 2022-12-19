@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from acceso import acceso
+from predict import pred_to_csv, grafica_pred
 
 import pickle
 import numpy as np
@@ -33,6 +34,8 @@ def predict():
 
 @app.route('/after_predict', methods=['POST'])
 def after_predict():
+    pred_to_csv(request.form['day'])
+    grafica_pred()
     return render_template('after_predict.html')
 
 @app.route('/health/', methods=['GET'])

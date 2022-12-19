@@ -6,8 +6,12 @@
         <h1>PREDICCIÓN</h1>
 
         <div class="box">
-            <form method="POST" action="{{url_for('after_predict')}}">
-                <button type="submit">Hacer predicción</button>
+            <form method="POST" action="{{url_for('after_predict')}}" class="form">
+                <div class="form-item">
+                    <label for="day">Dias a predecir</label>
+                    <input type="text" placeholder="introduce un valor" name="day">
+                </div>
+                <button type="submit" class="form-button">predict</button>
             </form>
             
         </div>

@@ -34,7 +34,7 @@ def acceso(dias):
         tabla = pd.DataFrame(tabla)
         tabla = tabla[-30:]
     db.close()
-    tabla.to_csv('src\static\data\last_30_days.csv')
+    tabla.to_csv('static/data/last_30_days.csv')
     return tabla
 
 #acceso()
