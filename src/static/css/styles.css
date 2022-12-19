@@ -45,3 +45,11 @@ a {
     border-radius: 1rem;
     padding: 1rem;
 }
+
+.form-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
