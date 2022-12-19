@@ -11,7 +11,7 @@
         <h1>Datos del último mes</h1>
     
         <div>
-            <table>
+            <table class="tablas">
                 {% for table in tables %}
                     <h2>{{titles[loop.index]}}</h2>
                     {{ table|safe }}
