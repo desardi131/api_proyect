@@ -3,6 +3,7 @@ virt/
 
 # to ignore cache from runing the app
 *.pyc
+*.DS_Store
 
 # to ignore zips
 *.zip
