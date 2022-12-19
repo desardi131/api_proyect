@@ -3,16 +3,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Actualizar</title>
+    <title>Datos del último mes</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
-    <h1>actualizar</h1>
-        <table>
-            {% for table in tables %}
-                <h2>{{titles[loop.index]}}</h2>
-                {{ table|safe }}
-                {% endfor %}
-        </table>
-    </h1>
+    <div>
+        <h1>Datos del último mes</h1>
+    
+        <div>
+            <table>
+                {% for table in tables %}
+                    <h2>{{titles[loop.index]}}</h2>
+                    {{ table|safe }}
+                    {% endfor %}
+            </table>
+        </div>
+    </div>
 </body>
 </html>
