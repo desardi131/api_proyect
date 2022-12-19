@@ -4,10 +4,13 @@
 <body>
     <div>
         <h1>ACTUALIZACIÓN</h1>
-        
-        <form method="GET" action="{{url_for('get_all')}}">
-            <button type="submit">actu</button>
-        </form>
+
+        <div class="box">
+            <form method="POST" action="{{url_for('actualizar')}}">
+                <button type="submit">actualizar</button>
+            </form>
+
+        </div>
     </div>
 </body>
-</html> 
+</html>
