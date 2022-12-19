@@ -29,7 +29,7 @@ def get_all():
     port = "3306"
     cursorclass = pymysql.cursors.DictCursor
 
-    # gets the credentials from .aws/credentials
+    # gets the credentials from .aws/credentials 
     db = pymysql.connect(host=host,
                          user=username,
                          password=password,
