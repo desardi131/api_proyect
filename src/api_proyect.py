@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from acceso import acceso
 from predict import pred_to_csv, grafica_pred
+import error as e
 
 import pickle
 import numpy as np
@@ -30,6 +31,7 @@ def actualizar():
 
 @app.route('/predict')
 def predict():
+    e.mape()
     return render_template('predict.html')
 
 @app.route('/after_predict', methods=['POST'])
