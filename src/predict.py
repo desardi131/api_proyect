@@ -23,7 +23,10 @@ def grafica_pred():
 
     df = pd.read_csv('static/data/prediction.csv')
 
-    fig = px.line(df, x=df.columns[0], y=df.columns[1], title='Usuarios por dia')
+    df['0'] = df['0'].round(1)
+
+    fig = px.line(df, x=df.columns[0], y=df.columns[1], title='Usuarios por dia',text = df.columns[1])
+    fig.update_traces(textposition="bottom right")
     fig.show()
 
     fig.write_html("static/graph/grafica.html")
