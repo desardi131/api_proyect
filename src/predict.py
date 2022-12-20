@@ -32,3 +32,13 @@ def grafica_pred():
     fig.show()
 
     fig.write_html("static/graph/grafica.html")
+
+def grafica_actu():
+
+    df = pd.read_csv('static/data/last_30_days.csv')
+
+    fig = px.line(df, x=df.columns[1], y=df.columns[2], title='Usuarios ultimos 30 dias',text = df.columns[2])
+    fig.update_traces(textposition="bottom right")
+    fig.show()
+
+    fig.write_html("static/graph/grafica_tabla.html")

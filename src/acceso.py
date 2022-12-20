@@ -30,11 +30,10 @@ def acceso(dias):
     #por si quiero que devuelva los últimos 30 o el df entero
     if dias == 'todo':
         tabla = pd.DataFrame(tabla)
+        return tabla
     elif dias == 'mes':
         tabla = pd.DataFrame(tabla)
         tabla = tabla[-30:]
     db.close()
     tabla.to_csv('static/data/last_30_days.csv')
-    return tabla
 
-#acceso()

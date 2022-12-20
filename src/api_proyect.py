@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from acceso import acceso
-from predict import pred_to_csv, grafica_pred
+from predict import pred_to_csv, grafica_pred, grafica_actu
 from error import mape
 
 import pickle
@@ -25,9 +25,17 @@ def re_train():
     return render_template('re_train.html')
 
 # Esto es sólo pa subir los últimos 30 días de la base de datos
+'''
 @app.route('/actualizar', methods=['POST'])
 def actualizar():
     return render_template('actualizar.html', tables = [acceso('mes').to_html()], titles=[''])
+'''
+
+@app.route('/actualizar', methods=['POST'])
+def actualizar():
+    acceso('mes')
+    grafica_actu()
+    return render_template('actualizar.html')
 
 @app.route('/predict')
 def predict():
