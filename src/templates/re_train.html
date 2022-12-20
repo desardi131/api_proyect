@@ -1,12 +1,27 @@
+<!DOCTYPE html>
 <html lang="es">
+<head>
+    <meta charset="UTF-8">
     <title>Retrain</title>
     <link rel="stylesheet" href="../static/css/styles.css">
+</head>
 <body>
     <div>
         <h1>RE-ENTRENAMIENTO</h1>
-        <div class="box">
-            <button type="submit">Reentrenar</button>
+        <div class="box-beta">
+            <button type="button" onclick="mostrarMagic()">Reentrenar</button>
+        </div>
+        <div id="magic">
+            <h2>Modelo reentrenado</h2>
+            <p>El modelo ha sido reentrenado con los datos del último mes</p>
         </div>
     </div>
+    <script type="text/javascript">
+        function mostrarMagic() {
+            var magic = document.getElementById("magic");
+            magic.style.display = "block";
+        }
+
+    </script>
 </body>
 </html>
