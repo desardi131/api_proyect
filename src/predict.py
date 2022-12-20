@@ -23,7 +23,9 @@ def grafica_pred():
 
     df = pd.read_csv('static/data/prediction.csv')
 
-    df['0'] = df['0'].round(1)
+    df.columns = ['Dates', 'Users']
+
+    df['Users'] = df['Users'].round(1)
 
     fig = px.line(df, x=df.columns[0], y=df.columns[1], title='Usuarios por dia',text = df.columns[1])
     fig.update_traces(textposition="bottom right")
